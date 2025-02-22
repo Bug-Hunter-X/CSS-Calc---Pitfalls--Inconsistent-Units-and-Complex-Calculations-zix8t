@@ -1,0 +1,17 @@
+/* bugSolution.css */
+
+/* Instead of this (inconsistent units): */
+/* width: calc(100% - 10em); */
+
+/* Use consistent units: */
+width: calc(100% - 100px); /* Or convert em to px based on context */
+
+/* Instead of this (overly complex): */
+/* height: calc( (100vh - 50px)/2 - 10%); */
+
+/* Use multiple calc functions for clarity and easier debugging: */
+height: calc(100vh - 50px); /*Calculate the available height first*/
+height: calc(height/2); /*Then divide by 2 */
+height: calc(height - 10%); /*Finally subtract the percentage*/
+
+/*Always ensure that you are using consistent units to prevent errors and unexpected behaviors*/
